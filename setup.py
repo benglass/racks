@@ -16,7 +16,7 @@ setup(
     packages=['racks'],
     entry_points={
         'console_scripts': [
-            'racks=racks.main:start'
+            'racks=racks.main:maia'
         ],
     },
     classifiers={
