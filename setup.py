@@ -1,3 +1,5 @@
+from racks import __version__
+
 import os
 import sys
 
@@ -24,8 +26,9 @@ if sys.argv[-1] == 'publish':
 
 setup(
     name='racks',
-    version='0.0.1',
+    version='.'.join(str(x) for x in __version__),
     description='racks on sacks for stacked graphs',
+    long_description=open('README.md').read(),
     url='http://www.github.com/benglass/racks',
     author='Ben Glassman',
     author_email='bglassman@gmail.com',
