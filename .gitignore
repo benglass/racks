@@ -1,2 +1,3 @@
+dist/
 racks.egg-info/
 *.pyc
