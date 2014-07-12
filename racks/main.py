@@ -36,5 +36,3 @@ def main():
             normalize_numbers(numbers)
         except ValueError:
             cprint('Racks only accepts integers', 'red')
-    # print(args)
-    # print('▁ ▂ ▃ ▅ ▆ ▇')

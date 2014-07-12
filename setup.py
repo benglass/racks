@@ -1,9 +1,26 @@
+import os
+import sys
+
 try:
     from setuptools import setup
 except:
     from distutils.core import setup
 
 dependencies = ['docopt', 'termcolor']
+
+def build():
+    os.system('python setup.py sdist')
+
+def publish():
+    os.system('python setup.py sdist upload')
+
+if sys.argv[-1] == 'build':
+    build()
+    sys.exit()
+
+if sys.argv[-1] == 'publish':
+    publish()
+    sys.exit()
 
 setup(
     name='racks',
@@ -16,7 +33,7 @@ setup(
     packages=['racks'],
     entry_points={
         'console_scripts': [
-            'racks=racks.main:maia'
+            'racks=racks.main:main'
         ],
     },
     classifiers={
